@@ -1,8 +1,12 @@
-# 🧪 TP — Analyse de trajets (Streams & ParallelStream)
+# TP — Analyse de trajets (Streams & ParallelStream)
 
 ---
 
-## 📌 Contexte
+## Projet
+
+Vous trouverez le squelette du projet sur le repo suivant : https://github.com/KeligMartin/exam-iabd
+
+## Contexte
 
 Vous travaillez pour une application de mobilité (type Uber / Bolt).
 
@@ -15,7 +19,7 @@ Votre objectif est d’analyser un grand volume de trajets afin de :
 
 ---
 
-## 📦 Modèle fourni
+## Modèle fourni
 
 ```java
 public record Trip(
@@ -34,7 +38,7 @@ public record Trip(
 
 ---
 
-## 🎯 Objectifs
+## Objectifs
 
 * Manipuler les Streams Java
 * Utiliser Predicate, Function, Comparator
@@ -44,7 +48,7 @@ public record Trip(
 
 ---
 
-## 🔍 PARTIE 1 — Filtrage (30 min)
+## PARTIE 1 — Filtrage (30 min)
 
 ### Exercice 1
 
@@ -83,7 +87,7 @@ Conditions :
 
 ---
 
-## 📊 PARTIE 2 — Analyse & statistiques (40 min)
+## PARTIE 2 — Analyse & statistiques (40 min)
 
 ### Exercice 4
 
@@ -115,7 +119,7 @@ Durée moyenne par ville
 
 ---
 
-## 🧠 PARTIE 3 — Tri & recherche (30 min)
+## PARTIE 3 — Tri & recherche (30 min)
 
 ### Exercice 7
 
@@ -148,7 +152,7 @@ Comparator<Trip> byRating
 
 ---
 
-## ⚡ PARTIE 4 — Traitement parallèle (40 min)
+## PARTIE 4 — Traitement parallèle (40 min)
 
 ### Exercice 10
 
