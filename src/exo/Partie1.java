@@ -28,6 +28,8 @@ public class Partie1 {
     }
 
     public List<Trip> recentTrips(List<Trip> trips) {
-        return List.of();
+        return trips.stream()
+                .filter(recent)
+                .collect(Collectors.toList());
     }
 }
