@@ -4,26 +4,30 @@ import models.Trip;
 
 import java.util.List;
 import java.util.Map;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class Partie4 {
 
+    Predicate<Trip> premium = t -> t.price() > 30 && t.rating() > 4;
+
     public double totalRevenueSequential(List<Trip> trips) {
-        // stream()
-        return 0;
+        return trips.stream()
+                .mapToDouble(t -> t.price())
+                .sum();
     }
 
     public double totalRevenueParallel(List<Trip> trips) {
-        // parallelStream()
-        return 0;
+        return trips.parallelStream()
+                .mapToDouble(t -> t.price())
+                .sum();
     }
 
     public Map<String, Long> countByCityParallel(List<Trip> trips) {
-        // coder ici
         return Map.of();
     }
 
     public List<Trip> premiumTripsParallel(List<Trip> trips) {
-        // prix > 30 et rating > 4
         return List.of();
     }
 }
