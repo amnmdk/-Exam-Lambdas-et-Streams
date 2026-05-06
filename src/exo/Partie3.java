@@ -21,6 +21,7 @@ public class Partie3 {
     }
 
     public Optional<Trip> bestTrip(List<Trip> trips) {
-        return Optional.empty();
+        return trips.stream()
+                .max(byNote);
     }
 }
