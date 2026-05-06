@@ -22,7 +22,9 @@ public class Partie1 {
     }
 
     public List<Trip> badTrips(List<Trip> trips) {
-        return List.of();
+        return trips.stream()
+                .filter(mauvaise)
+                .collect(Collectors.toList());
     }
 
     public List<Trip> recentTrips(List<Trip> trips) {
