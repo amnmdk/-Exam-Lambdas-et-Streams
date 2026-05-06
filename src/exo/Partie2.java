@@ -19,7 +19,8 @@ public class Partie2 {
     }
 
     public Map<String, Double> revenueByDriver(List<Trip> trips) {
-        return Map.of();
+        return trips.stream()
+                .collect(Collectors.groupingBy(parChauffeur, Collectors.summingDouble(t -> t.price())));
     }
 
     public Map<String, Double> avgDurationByCity(List<Trip> trips) {
