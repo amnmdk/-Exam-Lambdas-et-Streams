@@ -24,6 +24,7 @@ public class Partie2 {
     }
 
     public Map<String, Double> avgDurationByCity(List<Trip> trips) {
-        return Map.of();
+        return trips.stream()
+                .collect(Collectors.groupingBy(parVille, Collectors.averagingDouble(t -> t.durationMin())));
     }
 }
