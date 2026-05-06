@@ -29,6 +29,8 @@ public class Partie4 {
     }
 
     public List<Trip> premiumTripsParallel(List<Trip> trips) {
-        return List.of();
+        return trips.parallelStream()
+                .filter(premium)
+                .collect(Collectors.toList());
     }
 }
