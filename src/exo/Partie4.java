@@ -24,7 +24,8 @@ public class Partie4 {
     }
 
     public Map<String, Long> countByCityParallel(List<Trip> trips) {
-        return Map.of();
+        return trips.parallelStream()
+                .collect(Collectors.groupingBy(t -> t.city(), Collectors.counting()));
     }
 
     public List<Trip> premiumTripsParallel(List<Trip> trips) {
