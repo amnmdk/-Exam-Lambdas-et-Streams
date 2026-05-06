@@ -2,22 +2,30 @@ package exo;
 
 import models.Trip;
 
+import java.time.LocalDate;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class Partie1 {
 
+    Predicate<Trip> longEtCher = t -> t.distanceKm() > 10 && t.price() > 20;
+
+    Predicate<Trip> mauvaise = t -> t.rating() < 3;
+
+    Predicate<Trip> recent = t -> t.startTime().toLocalDate().isAfter(LocalDate.now().minusDays(1));
+
     public List<Trip> longAndExpensiveTrips(List<Trip> trips) {
-        // distance > 10km et prix > 20€
-        return List.of();
+        return trips.stream()
+                .filter(longEtCher)
+                .collect(Collectors.toList());
     }
 
     public List<Trip> badTrips(List<Trip> trips) {
-        // rating < 3
         return List.of();
     }
 
     public List<Trip> recentTrips(List<Trip> trips) {
-        // aujourd’hui ou hier
         return List.of();
     }
 }
